@@ -1,0 +1,92 @@
+
+
+    <head>
+        <title>FBLakery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    </head>
+    
+    <body>
+        <header>
+           
+        </header>
+        
+        <div class="body-content">
+            
+            {{> Template.dynamic template=tab}}
+            
+            <div class="center-nav">
+					        <input name="toggler" type= "checkbox" id="toggler" unchecked>
+					        <input name="resizer" type= "checkbox" id="resizer" unchecked>
+					        
+                  <div class="circle" id= "menu">
+        						<nav style = "transition: display 300ms ease;">
+        							<ul>
+        								<li data-template="view2" class="nav-item">Order</li>
+        								<li data-template="view1" class="nav-item">Ingredients</li>
+        								<label class="nav-expand" for="resizer"> Why Gluten-Free?</label>
+        							</ul>
+        						</nav>
+        						<label for="toggler" class="toggle" id="clicker">(logo)</label>
+        						<nav>
+        							<ul>
+        								<li data-template="view-1" class="nav-item">Dining</li>
+        								<li data-template="view-2" class="nav-item">Reserve</li>
+        							</ul>
+        						</nav>
+						
+						
+                  </div>
+                </div>
+            
+            
+        </div>
+        
+        <footer>
+        
+			    <span>Filler text</span>
+            
+        </footer>
+		
+        <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+    </body>
+
+
+<template name="view0">
+    <div class="split-container">
+                
+                
+                <div class="split-top">
+					
+					        <div class="split-content">
+						        <img src='http://www.quinzanisbakery.com/images/bread-sesame-vienna.jpg' class="back-img" />
+						        <span>Sample text</span>
+					        </div>
+                </div>
+                
+                
+                
+                <div class="split-bottom">
+                    <div class="split-content">
+						          Sample
+				          	</div>
+                </div>
+              
+            </div>
+</template>
+
+<template name="view1">
+    <div class = "placer">Hey</div>
+</template>
+
+<template name="view2">
+    <div class = "placer1">Hoi</div>
+</template>
+
+<template name="view-1">
+    <div class = "placer2">Hei</div>
+</template>
+
+<template name="view-2">
+    <div class = "placer3">Yo</div>
+</template>
