@@ -50,19 +50,49 @@ table {
 }
 		/*End Reset*/
 /*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*Variables*/
+
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+/*---------------------------------------------*/
+
 @media screen{
 body{
 	min-height: 100vh;
 	max-height: 100vh;
 }
+.body-content{
+  overflow:hidden; 
+  height: 90vh;
+  max-height:100vh;
+  
+}
+.content-wrapper{
+  margin-top: -100vh; 
+}
+.content-top{
+  margin-top:0vh;
+}
+
+.content-bottom{
+  margin-top: -200vh;
+}
+
 header{
 	position:absolute;
 	background-color:black;
-	z-index: 100;
+	z-index: 1000;
 	width:100%;	
 }
 .split-container{
-	background-color:red;
+	background-color:orange;
+	overflow:hidden;
+	height: 100vh;
 	
 }	
 footer{
@@ -70,6 +100,40 @@ footer{
 	background-color:black;
 	z-index: 50;
 	width:100%;	
+}
+#main-block{
+  transition: margin-top 400ms ease; 
+}
+
+#topnav{
+  position:absolute;
+  z-index:1000;
+  margin-top:8vh;
+  width: 100vw;
+}
+#bottomnav{
+  position:relative;
+  z-index:1000;
+  
+  width: 100vw;
+  background-color: yellow;
+}
+#topnav ul, #bottomnav ul{
+ display:flex;
+ justify-content: space-around;
+ width:100%
+}
+#topnav li{
+   display: inline;
+	  cursor: pointer;
+	  font-size :3vh;
+	  text-align:center;
+}
+#bottomnav li{
+  display: inline;
+	  cursor: pointer;
+	  font-size :3vh;
+	  text-align:center;
 }
 .split-top{
 	background-color:white;
@@ -102,8 +166,13 @@ footer{
 		opacity:.85;
 	}
 	
+	.view{
+	  margin-top: 0;
+	  margin-bottom:0;
+	}
 	.center-nav{
 		height: 0;
+		
 	}
 	.circle{
 		position: absolute;
@@ -118,37 +187,60 @@ footer{
 		justify-content: center;
 		transition: border-radius 400ms, margin-left 400ms, left 400ms, width 400ms, margin-top 400ms, height 400ms ; 
 	}
+	.topsidenav{
+	 margin: 36vh 0 0 -0vw !important;
+	 opacity: .55;
+	}
+	.topsidenav:hover, .bottomnav:hover{
+	  opacity:.95;
+	}
+	.bottomnav{
+	 margin:  -46vh 0 0 -0vw !important;
+	 opacity: .55;
+	}
 	.center-nav input{
 	  
 		display:none;
 	}
-	.circle .toggler{
-	   
-	}
+	
 	.circle nav{
 	  display:none;
 		transition: opacity 700ms ease;
 		flex-grow:1;
-		justify-content:center;
+		justify-content:space-around;
 		height:100%;
 		width: 45%;
 	}
 	.circle nav ul{
 	  display: flex;
 	  justify-content:space-around;
-	  flex-wrap:wrap;
-	  align-content: space-around;
-	  width: 45%;
+	  
+	  align-items: center;
+	  width: 100%;
 	  height:100%;
 	}
-	.circle nav li{
+	.circle nav li,  .nav-expand{
 	  display: inline;
 	  cursor: pointer;
-	  margin: 0px 50%;
+	  
+	  margin: 0px 0%;
+	  font-size :6vh;
+	  text-align:center;
+	  }
+	  .circle nav li div,  .nav-expand div{
+	   font-size: 2vw; 
 	  }
 	  .circle label{
 	    cursor: pointer; 
+	    
 	  }
+	  .circle .toggle{
+	    font-size: 8vw; 
+	    
+	  }
+	  
+	  
+	  
 	  
 	  .placer{
 	    height: 100vh;
@@ -163,21 +255,17 @@ footer{
 	  .placer2{
 	    height: 100vh;
 	    width: 100vw;
-	    background-color: lightblue;
+	    background-color:pink;
 	  }
 	  .placer3{
 	    height: 100vh;
 	    width: 100vw;
 	    background-color: yellow;
 	  }
-	  .offset-top{
-	   margin-top: -100vh; 
-	  }
-	  .offset-bottom{
-	   margin-bottom: -100vh; 
-	  }
+	  
 	  
 }
+
 
 @media screen and (max-width: 650px){
 	header{
@@ -204,28 +292,29 @@ footer{
 		margin-top:-70vh;
 	}
 	.circle{
-		width: 6rem;
-		height: 6rem;
-		margin-top: -3rem;
-		margin-left: -3rem;
-		border-radius: 3rem;
+		width: 20vw;
+		height: 20vw;
+		margin-top: -10vw;
+		margin-left: -10vw;
+		border-radius: 10vw;
+		font-size: 90%;
 	}
 	#toggler:checked ~ .circle{
 		border-radius: 0rem;
-		width:80vw;
-		margin-left:10vw;
+		width:100vw;
+		margin-left:0vw;
 		left:0;
-		height:40vh;
-		margin-top:-20vh;
+		height:15vh;
+		margin-top:-7.5vh;
 	}
 	#resizer:checked ~ .circle{
 		border-radius: 0rem;
 		width:100vw;
-		height:85vh;
+		height:90vh;
 		margin-left:0;
 		left:0;
 		
-		margin-top:-37.5vh;
+		margin-top:-45vh !important;
 	}
 	
 	/*.circle:hover{
@@ -235,9 +324,10 @@ footer{
 	}*/
 	
 	footer{
-	height: 50vh;
+	height: 30vh;
 	bottom: -25vh;
 	transform: skew(0,3deg);
+	
 	}
 	footer *{
 		transform: skew(0,-3deg);

@@ -3,7 +3,7 @@
     <head>
         <title>FBLakery</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     </head>
     
     <body>
@@ -12,50 +12,27 @@
         </header>
         
         <div class="body-content">
+        <div class="content-wrapper" id="main-block">
+            <div id="topsection" class="off">
+            <nav id="topnav">
+                <ul>
+  								<li data-template="1" class="nav-item lnr lnr-pencil">
+  								   <div data-template="1">Order</div>
+  								</li>
+  								<li data-template="2" class="nav-item lnr lnr-store">
+  								   <div data-template="2">Bakery</div>
+  								  </li>
+  								 <li data-template="3" class="nav-item lnr lnr-leaf">
+  								   <div data-template="3">Weed</div>
+  								</li>
+  								
+  							</ul>		
+              </nav>
+              {{> Template.dynamic template=toptab}}
+            </div>
             
-            {{> Template.dynamic template=tab}}
-            
-            <div class="center-nav">
-					        <input name="toggler" type= "checkbox" id="toggler" unchecked>
-					        <input name="resizer" type= "checkbox" id="resizer" unchecked>
-					        
-                  <div class="circle" id= "menu">
-        						<nav style = "transition: display 300ms ease;">
-        							<ul>
-        								<li data-template="view2" class="nav-item">Order</li>
-        								<li data-template="view1" class="nav-item">Ingredients</li>
-        								<label class="nav-expand" for="resizer"> Why Gluten-Free?</label>
-        							</ul>
-        						</nav>
-        						<label for="toggler" class="toggle" id="clicker">(logo)</label>
-        						<nav>
-        							<ul>
-        								<li data-template="view-1" class="nav-item">Dining</li>
-        								<li data-template="view-2" class="nav-item">Reserve</li>
-        							</ul>
-        						</nav>
-						
-						
-                  </div>
-                </div>
-            
-            
-        </div>
-        
-        <footer>
-        
-			    <span>Filler text</span>
-            
-        </footer>
-		
-        <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
-    </body>
-
-
-<template name="view0">
-    <div class="split-container">
-                
-                
+             <div class="split-container">
+              
                 <div class="split-top">
 					
 					        <div class="split-content">
@@ -66,13 +43,88 @@
                 
                 
                 
-                <div class="split-bottom">
+                <div  class="split-bottom">
                     <div class="split-content">
 						          Sample
 				          	</div>
                 </div>
               
             </div>
+            
+            <div id="bottomsection" class="off">
+             
+              {{> Template.dynamic template=bottomtab}}
+              <nav id="bottomnav">
+                
+                <ul>
+                <li data-template="-1" class="nav-item lnr lnr-book">
+  								  <div data-template="-1" >Reserve</div>
+  								</li>
+  								<li data-template="-2" class="nav-item lnr lnr-home">
+  								  <div data-template="-2">Restaurant</div>
+  								</li>
+  								<li data-template="-3" class="nav-item lnr lnr-warning">
+  								  <div data-template="-3" >No, please</div>
+  								</li>
+  								
+  								
+  							</ul>		
+              
+              </nav>
+            </div>
+            
+            <div class="center-nav">
+					        <input name="toggler" type= "checkbox" id="toggler" unchecked>
+					        <input name="resizer" type= "checkbox" id="resizer" unchecked>
+					        
+                  <div class="circle" id= "menu">
+        						<nav style = "transition: display 300ms ease;">
+        							<ul>
+        								<li data-template="2" class="nav-item lnr lnr-pencil">
+        								   <div data-template="2">Order</div>
+        								</li>
+        								<li data-template="1" class="nav-item lnr lnr-store">
+        								   <div data-template="1">Bakery</div>
+        								  </li>
+        								<label class="nav-expand lnr lnr-question-circle" for="resizer">
+        								  <div>Gluten-Free?</div>
+        								</label>
+        							</ul>
+        						</nav>
+        						<label for="toggler" class="toggle" id="clicker"><span class="lnr lnr-mustache"></span></label>
+        						<nav>
+        							<ul>
+        							 <label class="nav-expand lnr lnr-diamond" for="resizer">
+        								  <div>Gluten-Free?</div>
+        								</label>
+        								<li data-template="-1" class="nav-item lnr lnr-home">
+        								  <div data-template="-1">Restaurant</div>
+        								</li>
+        								<li data-template="-2" class="nav-item lnr lnr-book">
+        								  <div data-template="-2" >Reserve</div>
+        								</li>
+        							</ul>
+        						</nav>
+						
+						
+                  </div>
+                </div>
+            
+        </div>
+        </div>
+        
+        <footer>
+        
+			    <span>Filler text</span>
+            
+        </footer>
+		
+        
+    </body>
+
+
+<template name="weed">
+   <img src="https://45.media.tumblr.com/6c6bb7c0f350042d48dc0c2c96546c66/tumblr_nswshySLrl1uvefiyo1_400.gif" style="height: 100vh">
 </template>
 
 <template name="view1">
@@ -89,4 +141,8 @@
 
 <template name="view-2">
     <div class = "placer3">Yo</div>
+</template>
+
+<template name="surprise">
+    <div class = "placer1">Yo</div>
 </template>
